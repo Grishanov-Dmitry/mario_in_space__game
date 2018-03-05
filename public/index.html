@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <script src="https://use.fontawesome.com/65e1194df5.js"></script>
+    <!--<link rel="stylesheet" href="main.css">-->
+    <script src="bundle.js" defer></script>
+</head>
+<body id="body">
+<canvas id="canvas" class="canvas"></canvas>
+
+<audio src="./sounds/jump.wav" id="audio_jump"></audio>
+<audio src="./sounds/coin.mp3" id="audio_coin"></audio>
+<audio src="./sounds/crash.mp3" id="audio_crash"></audio>
+<audio src="./sounds/the_win.mp3" id="audio_win"></audio>
+<audio src="./sounds/in_menu.mp3" id="audio_menu" autoplay></audio>
+
+
+<div class="starsCounter" id="starsCounter">STARS <span id="counter1">0 </span>/ 2</div>
+<div class="coinCounter" id="coinCounter">COINS <span id="counter2">0 </span>/ 50</div>
+
+<div class="loading" id="loading">
+    <p>Please wait, loading</p>
+</div>
+
+    <div class="wrapper" id="wrapper">
+        <nav>
+            <div class="button-start-description">
+                <button id="button-start">START GAME</button>
+                <button id="button-full-screen">ON FULL SCREEN</button>
+                <a href="#controls-manual"><button id="button-how-to-play">HOW TO PLAY</button></a>
+                <a href="#screenshots"><button id="button-screenshots">SCREENSHOTS</button></a>
+                <a href="#other-info"><button id="button-other-info">OTHER INFO</button></a>
+
+            </div>
+
+            <a href="#wrapper">
+                <button id="page-up" class="button-up">
+                    UP  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </button>
+            </a>
+
+            <div class="game-name">
+                <p>Mario</p>
+                <p>in</p>
+                <p>Space</p>
+            </div>
+        </nav>
+    </div>
+
+<div class="game_over" id="game_over">
+    <h3>Oh, you lost!</h3>
+    <p>May be , try again?</p>
+    <button class="button__start_again" id="button__start_again">START AGEIN</button>
+</div>
+
+<div class="game_win" id="game_win">
+    <h3>You are winner!</h3>
+    <p>Congratulate</p>
+</div>
+
+<div class="wrapper_2">
+
+    <section class="controls-manual" id="controls-manual">
+
+        <div class="how_play"><h3>How to play?</h3></div>
+
+        <div class="keys-discription">
+
+            <div class="first">
+
+                <figure>
+                    <img src="./images/wasd-keys-a.png" alt="press key A">
+                    <figcaption>
+                        If you pressed key 'A', Mario will be run to the left until you release the key.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="./images/wasd-keys-w.png" alt="press key W">
+                    <figcaption>
+                        If you pressed key 'W', Mario will jump.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="./images/wasd-keys-d.png" alt="press key D">
+                    <figcaption>
+                        If you pressed key 'D', Mario will be run to the right until you release the key.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <div>
+
+                <figure>
+                    <img src="./images/wasd-keys-s.png" alt="press key S">
+                    <figcaption>
+                        If you pressed key 'S', Mario will have climbed into the tube if he stays on it.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="./images/wasd-keys-d-w-a.png" alt="press key W + A">
+                    <figcaption>
+                        If you pressed key 'W + A', Mario will run to the left and jump at the same time.
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="./images/wasd-keys-d-w.png" alt="press key W + D">
+                    <figcaption>
+                        If you pressed key 'W + D', Mario will run to the right and jump at the same time.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="screenshots" id="screenshots">
+
+        <div class="first">
+            <figure>
+                <img src="./images/screen-1.png" alt="screenshot">
+                <figcaption>
+                    It is the screenshot of the start game
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="./images/screen-2.png" alt="screenshot">
+                <figcaption>
+                    It is the game over screenshot. <br> If you lost, you can start the game again.
+                </figcaption>
+            </figure>
+        </div>
+
+        <div class="second">
+            <figure>
+                <img src="./images/screen-3.png" alt="screenshot">
+                <figcaption>
+                    If you want go to the second floor, run to the tube and press S.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="./images/screen-4.png" alt="screenshot">
+                <figcaption>
+                    If you collect all stars and coins, you can go to the door and free the Queen.
+                </figcaption>
+            </figure>
+
+        </div>
+
+    </section>
+
+    <section class="other-info" id="other-info">
+        <div><h2>Meet - it is my team!</h2></div>
+        <img src="images/my_team.jpg" alt="foto">
+    </section>
+
+    <section class="bg" id="bg"></section>
+
+</div>
+
+<footer id="footer">
+    <h3>Produced by Dmitry Grishanov</h3>
+</footer>
+
+</body>
+</html>
